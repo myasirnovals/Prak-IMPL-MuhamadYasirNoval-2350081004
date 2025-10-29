@@ -8,7 +8,6 @@ public class CinemaCalculations extends Cinema {
             return ((DeluxeCinema) cinema).price * 12 / 100;
         } else if (cinema instanceof PremiumCinema) {
             return ((PremiumCinema) cinema).price * 20 / 100;
-        } else
-            return 0.0;
+        } else return 0.0;
     }
 }

@@ -1,6 +1,6 @@
 package sesudah;
 
-public class Smartphone extends Product{
+public class Smartphone extends Product {
     @Override
     String getName() {
         return "";

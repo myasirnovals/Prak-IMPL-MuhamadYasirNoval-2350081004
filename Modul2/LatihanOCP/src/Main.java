@@ -2,8 +2,8 @@ import sesudah.*;
 
 public class Main {
     public static void main(String[] args) {
-        StandardCinema standardCinema = new StandardCinema(100.0);
-        Double adminFee = standardCinema.calculateAdminFee();
+        MahasiswaCinema mhsCinema = new MahasiswaCinema(100.0);
+        Double adminFee = mhsCinema.calculateAdminFee();
         System.out.println(adminFee);
     }
 }

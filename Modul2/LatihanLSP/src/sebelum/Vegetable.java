@@ -7,6 +7,7 @@ public class Vegetable extends Product {
     String getName() {
         return "Broccoli";
     }
+
     @Override
     Date getExpiredDate() {
         return new Date();

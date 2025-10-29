@@ -3,9 +3,8 @@ import sesudah.Order;
 import sesudah.OrderHistory;
 import sesudah.OrderViewer;
 
-
 public class Main {
-    static void main() {
+    public static void main(String[] args) {
         Item item = new Item();
         Order order = new Order();
         order.addItem(item);
