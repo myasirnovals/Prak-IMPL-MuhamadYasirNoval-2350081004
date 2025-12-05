@@ -14,7 +14,7 @@ public class ExcepTest {
         System.out.println("Out of the block");
 
         try {
-            File fileName = null;
+            File fileName = new File("Text.txt");
             FileInputStream file = new FileInputStream(fileName);
             byte x = (byte) file.read();
         } catch (FileNotFoundException f) {
