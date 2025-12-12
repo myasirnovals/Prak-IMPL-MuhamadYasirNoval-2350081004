@@ -1,12 +1,5 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['id'])) {
-    echo "Anda harus login terlebih dahulu.";
-    exit;
-}
-
-$idPengirim  = $_SESSION['id'];
+$idPengirim  = 1; // asumsi pengirim adalah user dengan ID 1
 $idPenerima  = isset($_POST['Penerima']) ? $_POST['Penerima'] : '';
 $judul       = isset($_POST['judul']) ? $_POST['judul'] : '';
 $TextPesan   = isset($_POST['TextPesan']) ? $_POST['TextPesan'] : '';

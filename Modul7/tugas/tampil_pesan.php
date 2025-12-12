@@ -1,13 +1,4 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['id'])) {
-    echo "Anda harus login terlebih dahulu.";
-    exit;
-}
-
-$idPenerima = $_SESSION['id'];
-
 $host   = "localhost";
 $user   = "root";
 $pass   = "";
@@ -40,7 +31,7 @@ function getPesanByPenerima($conn, $idPenerima) {
     return $data;
 }
 
-$daftarPesan = getPesanByPenerima($conn, $idPenerima);
+$daftarPesan = getPesanByPenerima($conn, 1);
 ?>
 <!doctype html>
 <html lang="id">
@@ -74,7 +65,7 @@ $daftarPesan = getPesanByPenerima($conn, $idPenerima);
                 <td><?php echo htmlspecialchars($pesan['idPengirim']); ?></td>
                 <td><?php echo htmlspecialchars($pesan['WktPesan']); ?></td>
                 <td>
-                    <a href="hapusPesan.php?idPesan=<?php echo urlencode($pesan['idPesan']); ?>"
+                    <a href="hapus_pesan.php?idPesan=<?php echo urlencode($pesan['idPesan']); ?>"
                        onclick="return confirm('Yakin ingin menghapus pesan ini?');">
                         Hapus
                     </a>

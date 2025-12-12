@@ -1,13 +1,6 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['id'])) {
-    echo "Anda harus login terlebih dahulu.";
-    exit;
-}
-
-$idUser  = $_SESSION['id'];
-$idPesan = isset($_GET['idPesan']) ? $_GET['idPesan'] : '';
+$idUser  = 1; // asumsi pengirim adalah user dengan ID 1
+$idPesan = 4; // asumsi id pesan yang akan dihapus adalah 4
 
 if ($idPesan === '') {
     echo "ID Pesan tidak ditemukan.";
@@ -65,6 +58,7 @@ $hasil = hapus_datapesan($conn, $idPesan);
 
 if ($hasil) {
     echo "pesan berhasil dihapus";
+    header("Location: tampil_pesan.php");
 } else {
     echo "pesan gagal dihapus";
 }
